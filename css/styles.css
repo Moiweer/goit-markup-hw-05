@@ -171,6 +171,7 @@ img {
 .contact-telephon-link {
   display: flex;
   justify-content: center;
+  align-items: center;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.4;
@@ -437,12 +438,9 @@ img {
 .client-icon-link:hover,
 .client-icon-link:focus {
   color: var(--accent-hover-color);
-}
-
-.client-icon-item:hover,
-.client-icon-item:focus {
   border: 1px solid var(--accent-hover-color);
 }
+
 
 .client-icon-item:not(:last-child) {
   margin-right: 30px;
@@ -552,6 +550,11 @@ a.logo.link {
   color: var(--accent-hover-color);
 }
 
+.footer-contact-mail-link:hover,
+.footer-contact-mail-link:focus {
+  color: var(--accent-hover-color);
+}
+
 .mail:focus {
   color: var(--accent-hover-color);
 }
@@ -598,7 +601,7 @@ a.logo.link {
 
 .footer-social-icon-link:hover,
 .footer-social-icon-link:focus {
-  color: var(--white-text-color);
+
   background-color: var(--accent-hover-color)
 }
 
@@ -652,6 +655,10 @@ a.logo.link {
 .filter-btn:focus {
   color: var(--white-text-color);
   background-color: var(--accent-hover-color);
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1),
+    0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
 }
 
 .portfolio-filter-list {
@@ -682,17 +689,20 @@ a.logo.link {
 
 }
 
+.portfolio-link-img {
+  display: block;
+  position: relative;
+}
 
-
-.portfolio-overlay{
+.portfolio-overlay {
   position: relative;
   overflow: hidden;
 }
 
-.overlay{
+.overlay {
 
   position: absolute;
-  top:0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
@@ -708,23 +718,20 @@ a.logo.link {
   transform: translateY(100%);
   transition: transform 250ms linear;
 }
-.portfolio-link-img {
-  display: block;
-  position: relative;
-}
 
-.portfolio-link-img:hover .overlay, 
+.portfolio-link-img:hover .overlay,
 .portfolio-link-img:focus .overlay {
   transform: translate(0%);
 
 }
-.portfolio-list-item:hover {
+
+.portfolio-link-img:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
-.portfolio-list-all:focus {
+.portfolio-link-img:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12),
     0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
@@ -755,6 +762,7 @@ a.logo.link {
   border-bottom: 1px solid var(--border-color);
   border-right: 1px solid var(--border-color);
   padding: 20px 24px;
+
 }
 
 .portfolio-list {
