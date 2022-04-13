@@ -148,9 +148,24 @@ img {
 
 .navigation-list-item {
   display: block;
+  position: relative;
+  padding-top: 32px;
+  padding-bottom: 32px;
 
 }
 
+.navigation-link.active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 4px;
+  background-color: var(--accent-hover-color);
+  border-radius: 2px;
+  transform: translateY(1px);
+}
 .contacts-list {
   display: flex;
   align-items: center;
